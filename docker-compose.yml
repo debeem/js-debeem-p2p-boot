@@ -1,0 +1,23 @@
+version: '3'
+services:
+    debeemP2PBootSrv:                       # Service Name
+        container_name: debeem-p2p-boot-srv
+        hostname: debeem-p2p-boot-srv
+        build:
+            context: .
+        image: debeem-p2p-boot-srv:latest
+        ports:
+            # Specify port mapping, similar to the -p option of docker run, please use string form
+            # [local port]:[container port]
+            - "8011:8011"
+        volumes:
+            #- ./deploy/etc/localtime:/etc/localtime:ro
+            #- ./deploy/etc/timezone:/etc/timezone:ro
+            #- ./deploy/etc/hosts:/etc/hosts:ro
+            - ./deploy/etc/debeem/.peerId:/etc/debeem/.peerId:ro
+            - ./deploy/etc/debeem/.swarmKey:/etc/debeem/.swarmKey:ro
+#        environment:
+#            - LISTEN_PORT=8011
+#            - FILE_PEER_ID=/etc/debeem/.peerId
+#            - FILE_SWARM_KEY=/etc/debeem/.swarmKey
+#            - ANNOUNCE_MULTIADDRS=
