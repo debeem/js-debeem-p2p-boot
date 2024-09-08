@@ -1,4 +1,4 @@
-FROM node:18.17.1
+FROM node:20.17.0
 
 #   Define build-time parameter
 #   docker build --build-arg PORT=8765 PEERS=http://localhost:9999,http://localhost:9998, -t my-node-app .

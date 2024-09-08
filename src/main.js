@@ -4,4 +4,4 @@ import { Boot } from "./boot.js";
 console.log( `main process.env`, process.env );
 new Boot().startBoot()
 	.then( ( res ) => console.log( `res :`, res ) )
-	.catch( err => { LogUtil.say( err ) } );
+	.catch( err => { LogUtil.error( err ) } );

@@ -10,6 +10,9 @@ import { ParamUtils } from "./utils/ParamUtils.js";
 import 'dotenv/config.js'
 
 
+/**
+ * 	@class
+ */
 export class Boot
 {
 	/**
